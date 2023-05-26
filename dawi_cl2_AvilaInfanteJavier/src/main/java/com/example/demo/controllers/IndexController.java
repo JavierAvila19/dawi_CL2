@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.demo.models.Area;
 import com.example.demo.models.Personal;
-import com.example.demo.services.AreaServiceImpl;
+
 import com.example.demo.services.PersonalServiceImpl;
 
 
@@ -26,8 +26,7 @@ public class IndexController {
 	@Autowired
 	private PersonalServiceImpl personalService;
 	
-	@Autowired
-	private AreaServiceImpl areaService;
+	
 	
 	@Value("${index.titulo.text}")
 	private String title;
@@ -45,12 +44,8 @@ public class IndexController {
 		return empleados;
 	}
 	
-	@ModelAttribute("areas")
-	public List<Area> obtenerAreas(){
-		List<Area> areas = areaService.getAllAreas();
-		
-		return areas;
-	}
+
+	
 	
 
 }
