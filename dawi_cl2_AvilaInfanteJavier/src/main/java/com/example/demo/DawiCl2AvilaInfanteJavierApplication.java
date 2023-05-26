@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Dawicl2Application {
+public class DawiCl2AvilaInfanteJavierApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Dawicl2Application.class, args);
+		SpringApplication.run(DawiCl2AvilaInfanteJavierApplication.class, args);
 	}
 
 }
