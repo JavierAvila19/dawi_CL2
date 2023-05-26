@@ -35,8 +35,8 @@ public class Area implements Serializable {
 	@Column(name = "jefe_area")
 	String jefe;
 	
-/*	@OneToMany(mappedBy="Area")
+	@OneToMany(mappedBy="area")
 	private List<Personal> personal;
 
-*/
+
 }

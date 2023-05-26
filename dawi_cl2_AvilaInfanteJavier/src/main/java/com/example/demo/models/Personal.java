@@ -35,9 +35,9 @@ private static final long serialVersionUID = 1L;
 	@Column(name = "sueldo_personal")
 	Long sueldo;
 	
-/*	@ManyToOne
-	@JoinColumn(name="cod_area")
-	private Area area;
+	@ManyToOne
+	@JoinColumn(name = "cod_area")
+	Area area;
 	
-	*/
+	
 }
