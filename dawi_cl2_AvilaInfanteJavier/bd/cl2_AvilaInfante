@@ -1,0 +1,39 @@
+set global time_zone = '+8:00';
+
+DROP DATABASE IF EXISTS cl2_AvilaInfante;
+
+CREATE DATABASE cl2_AvilaInfante;
+
+use cl2_AvilaInfante;
+
+CREATE TABLE IF NOT EXISTS Area(
+cod_area int NOT NULL AUTO_INCREMENT COMMENT 'Codigo de area',
+nombre_area varchar(100) NOT NULL COMMENT 'Nombre de area',
+jefe_area varchar(100) NOT NULL COMMENT 'Jefe de area',
+ PRIMARY KEY (`cod_area`)
+
+);
+
+insert into Area values(1, 'Contabilidad', 'Ronald Araujo');
+insert into Area values(2, 'Marketing', 'Alexia Putellas');
+insert into Area values(3, 'Recursos Humanos', 'Benjamin Pavard');
+
+CREATE TABLE IF NOT EXISTS Personal(
+cod_personal int NOT NULL AUTO_INCREMENT COMMENT 'Codigo de personal',
+ nombre_personal varchar(100) NOT NULL COMMENT 'Nombres de personal',
+ sueldo_personal int NOT NULL COMMENT 'Sueldo del personal',
+ cod_area int COMMENT 'Codigo de area',
+ PRIMARY KEY (`cod_personal`),
+ FOREIGN KEY  (cod_area) REFERENCES Area(cod_area)
+);
+
+insert into Personal values(1, 'Julian Alvarez', 2500, 1);
+insert into Personal values(2, 'Riqui Puig', 1600, 2);
+insert into Personal values(3, 'Edson Alvarez', 3000, 3);
+insert into Personal values(4, 'Paul Pogba', 2250, 1);
+insert into Personal values(5, 'Claudia Pina', 2600, 2);
+insert into Personal values(6, 'Ariana Arias', 1800, 3);
+insert into Personal values(7, 'Patricia Guijarro', 2100, 1);
+insert into Personal values(8, 'Bruno Fernandes', 2900, 2)
+
+
